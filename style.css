@@ -1,74 +1,89 @@
-/* Marcação para deixar toda a página sem estrutura de código para estruturar por partes. */
-
-* {
-    margin:0;
-    padding: 0;
+/* Aqui defino que o HTML e o body vão ocupar toda a altura da tela, e removo margens e padding padrão do navegador */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-/* Inserir imagem de fundo */
-body {background-image: url(imagens/imagemfundo.jpg);
-    background-size: cover;}
 
-/* Marcação da página e estrutura com dimensões e cor */
-#page {
-    box-sizing: border-box;
-    width: 800px;
+/* Aqui começo o body com um fundo azul-claro (azure), e uso flexbox pra estruturar a página em coluna.
+Também coloco altura mínima pra garantir que o rodapé vá pro final da tela em páginas curtas */
+body {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Aqui defino a "caixa" central (#page), que limita a largura do conteúdo e centraliza na tela com margin: auto */
+#page { 
+    width: auto;
+    max-width: 800px; /* Limita para não esticar em telas grandes */
     padding: 24px;
-    background-color: #F0E8C2;
     border-radius: 24px;
-    margin: 48px auto;
+    margin: 0 auto; /* Centralizando horizontalmente */
 }
 
-/* Marcação da imagem de capa e estrutura de dimensões */
-img{
+/* Todas as imagens vão ocupar 100% da largura disponível, com altura fixa de 600px e cantos arredondados */
+img {
+    width: 100%;
+    height: 600px;
+    border-radius: 28px;
     display: block;
-    margin: 0 auto;
-    border-radius: 16px;
-    max-width: 100%;
 }
 
-main {
-    padding: 24px;
+/* Estilo do h1: cor laranja, fonte em negrito e tamanho reduzido */
+h1{
+    color: orange;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 1; /* Pequeno ajuste no espaçamento abaixo */
 }
 
-section + section{
-    margin-top: 24px;
-}
-
-#sobre p+p{
-    margin-top: 12px;
-}
-
-h1, h2 {
-    margin-bottom: 5px;
-}
-
-h1, h2 {
+/* Estilo do h2: deixei a cor preta e coloquei negrito (falta um ponto e vírgula aqui, mas deixei como pediu) */
+h2{
     color:black;
+    font-weight:bold;
+    margin-top: 0;
 }
 
-ul {
-    padding-left: 15px;
+/* Faixa de divisão entre seções — um traço cinza claro com altura de 2px */
+.divisão {
+  width: 100%;
+  height: 2px;
+  margin: 2px 0;
+  background-color: #d9d9d9;
 }
 
-li{
-    padding: 1px;
-}
-/* Aqui fiz a alteração de tudo o que não era título ou subtítulo(h1 & h2)
-Sendo assim, alterando a cor do texto e listas(p & li) */
-p, li {
-    color:maroon;
+/* Aqui eu reduzi o espaço entre os títulos menores e listas */
+h3, li{
+    margin-bottom: 0;
 }
 
-footer{
-    color:maroon;
-      box-sizing: border-box;
-    width: 180px;
-    padding: 5px;
-    background-color: #F0E8C2;
-    border-radius: 24px;
-    margin: 20px auto;
-    margin-bottom: 30px;
-    font-size: 20px;
-    text-align: center;
-    padding-bottom: 4px;
+/* Rodapé centralizado, com texto em laranja e fundo mantendo o mesmo tom da página */
+footer {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(243, 160, 5);
+  padding: 0 16px;
+  background-color: azure; /* só pra manter coesão, opcional */
+}
+
+/* Aqui eu limito a largura do conteúdo do rodapé igual ao restante da página */
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: black;
+}
+
+/* Primeiro parágrafo do rodapé (texto explicativo) com cor preta e margem inferior pra espaçar */
+.footer-content p:first-child {
+  color: black;
+  margin-bottom: 16px;
+}
+
+/* Última linha do rodapé (assinatura) em laranja */
+.footer-content p:last-child {
+  color: orange;
 }
