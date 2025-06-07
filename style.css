@@ -1,0 +1,74 @@
+/* Marcação para deixar toda a página sem estrutura de código para estruturar por partes. */
+
+* {
+    margin:0;
+    padding: 0;
+}
+/* Inserir imagem de fundo */
+body {background-image: url(imagens/imagemfundo.jpg);
+    background-size: cover;}
+
+/* Marcação da página e estrutura com dimensões e cor */
+#page {
+    box-sizing: border-box;
+    width: 800px;
+    padding: 24px;
+    background-color: #F0E8C2;
+    border-radius: 24px;
+    margin: 48px auto;
+}
+
+/* Marcação da imagem de capa e estrutura de dimensões */
+img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 16px;
+    max-width: 100%;
+}
+
+main {
+    padding: 24px;
+}
+
+section + section{
+    margin-top: 24px;
+}
+
+#sobre p+p{
+    margin-top: 12px;
+}
+
+h1, h2 {
+    margin-bottom: 5px;
+}
+
+h1, h2 {
+    color:black;
+}
+
+ul {
+    padding-left: 15px;
+}
+
+li{
+    padding: 1px;
+}
+/* Aqui fiz a alteração de tudo o que não era título ou subtítulo(h1 & h2)
+Sendo assim, alterando a cor do texto e listas(p & li) */
+p, li {
+    color:maroon;
+}
+
+footer{
+    color:maroon;
+      box-sizing: border-box;
+    width: 180px;
+    padding: 5px;
+    background-color: #F0E8C2;
+    border-radius: 24px;
+    margin: 20px auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 4px;
+}
